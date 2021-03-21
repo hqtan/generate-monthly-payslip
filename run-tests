@@ -1,0 +1,13 @@
+#!/bin/bash
+
+docker image inspect gen-monthly-payslip &> /dev/null
+
+if [[ $? -eq 1 ]]; then
+  echo "Please wait while the docker image is building..."
+  echo
+  
+  docker build -t gen-monthly-payslip .
+  echo; echo
+fi
+
+docker run -it --rm --entrypoint="" gen-monthly-payslip sbt test

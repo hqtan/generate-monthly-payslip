@@ -1,0 +1,12 @@
+/project/target
+/project/project
+/target
+.env
+.ctags_srcs
+.bsp/
+.metals/
+.vscode/
+project/metals.sbt
+.bloop/
+project/.bloop/
+*.png
